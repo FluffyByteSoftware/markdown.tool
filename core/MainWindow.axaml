@@ -2,8 +2,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="https://github.com/whistyun/Markdown.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="core.MainWindow"
-        Title="core">
-    Welcome to Avalonia!
+        x:Class="Core.MainWindow"
+        Title="Markdown Reader">
+
+    <DockPanel>
+        <Button DockPanel.Dock="Top" Content="Open..." Click="OnOpen" Margin="8" />
+        <md:MarkdownScrollViewer x:Name="Viewer" Margin="8" />
+    </DockPanel>
+
 </Window>
